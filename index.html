@@ -238,6 +238,14 @@ fieldset {
 		});
 	}
 </script>
+	<script>
+	const dateInput = document.getElementById('date');
+
+// ✅ Using UTC (universal coordinated time)
+dateInput.value = new Date().toISOString().split('T')[0];
+
+console.log(new Date().toISOString().split('T')[0]);
+</script>
 
 
 
@@ -264,7 +272,7 @@ fieldset {
   	
 		<input name="Vorname" placeholder="Vorname"  />
 		<br/>
-		<input name="Nachname" placeholder="Nachname"  />
+		<input type="date" id="date" name="Nachname" placeholder="Nachname"  />
 		<br/>
    <br/>
 	  <input name="Alter" placeholder="Alter"  />
