@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Lato-regular/Lato-regular.eot');
+  src: url('/fonts/Lato-regular/Lato-regular.eot?#iefix') format('embedded-opentype'),
+       local('Lato Regular'),
+       local('Lato-regular'),
+       url('../fonts/Lato-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/Lato-700/Lato-700.eot');
+  src: url('/fonts/Lato-700/Lato-700.eot?#iefix') format('embedded-opentype'),
+       local('Lato Bold'),
+       local('Lato-700'),
+       url('../fonts/Lato-700.woff2') format('woff2');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	padding: 60px 40px;
+	height: 100%;
+}
+
+form {
+	display: block;
+	min-height: 30px;
+	width: 100%;
+	margin: 0 auto 5px auto;
+	text-align: left;
+}
+form2 {
+	background: #fff;
+	color: #000;
+	display: block;
+	min-height: 0px;
+	width: 100%;
+	margin: 0 auto 5px auto;
+	text-align: left;
+}
+
+
+img { zoom: 50% }
+
+h1 {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+img2 { zoom: 100% }
+
+h1 {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+
+h2 {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 70px;
+}
+
+p {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	margin-top: 70px;
+}
+
+input {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0px 0;
+	margin-top: 8px;
+	background: #fff;
+	border: none;
+	border-bottom: 1px solid #d9d9d9;
+	color: #000;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+.warning {
+	color: #e50000;
+	font-size: 12px;
+	text-align: left;
+	margin-top: 10px;
+}
+
+a, a:hover {
+	color: #4d90fe;
+	text-decoration: none;
+}
+
+button {
+  text-align: center;
+	font-size: 22px;
+	font-weight: 400;
+	border: none;
+	border-radius: 3px;
+	color: #FFFFFF;
+	background-color: 	#0000FF;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+	padding: 16px 150px;
+	margin-top: +34px;
+	cursor: pointer;
+}
+
+
+
+button2 {
+	font-size: 13px;
+	font-weight: 400;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #4d90fe;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px;
+	padding: 0px 0x;
+	margin-top: 0px;
+	cursor: pointer;
+
+}
+
+
+footer {
+	width: 100%;
+	margin: 60px auto;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+footer span { color: #7e7e7e }
+.text-right { float: right }
+
+@media (min-width: 550px) {
+	
+	
+	form {
+		width: 370px;
+		background: #fff;
+		padding: 60px 40px;
+		border-radius: 12px;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px;
+	}
+	
+	footer {
+		width: 450px;
+		margin-top: 25px;
+	}
+}
+
+h1 {
+  
+  font-family: verdana;
+  font-size: 250%;
+padding-top: 1px;
+padding: 1px;
+ padding-bottom: 1px;
+}
+p1  {
+  padding-bottom: 0px;
+  font-size: 300%;
+padding-top: 0px;
+
+}
+
+fieldset {
+  display: inline-grid;
+  line-height: 1.5;
+}
+
+
+
+</style>
+
+
+
+  
+  <br/>
+  <br/>
+  <br/>
+	<title>"Save Web Form Data to Spreadsheets"</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/AWcvdtIorLm4LBC8/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+				 window.alert("Anmeldedaten erfolgreich Submitted :) ")
+				}
+				error: function(){
+					alert("Please try Again :(")
+				}
+			});
+		}
+
+  </script>
+
+
+
+
+</head>
+<!--  &nbsp type="hidden" 
+
+
+  -->
+
+<body>
+
+
+
+
+<div class="content">
+  <h1>Tricking Factory </h1>
+ <h1>Anmeldeformular: </h1>
+  <br/>
+
+<form id="myForm">
+
+  	<input type="hidden" name="Datum" value=""  />
+		<br/>
+		<input name="Vorname" placeholder="Vorname"  />
+		<br/>
+		<input name="Nachname" placeholder="Nachname"  />
+		<br/>
+   <br/>
+	  <input type="number" name="Alter" placeholder="Alter"  />
+    <br/>
+<br/>
+
+    Mit der Betätigung der Eingabe bestätige ich, das Reglement der Trickingfactory gelesen und verstanden zu haben. <a href="https://www.trickingfactory.ch/assets/docs/TF_TrainingsReglement.pdf">Reglemnet Tricking Factory!</a>
+   <br/>
+  	<button onclick='SubForm()'>Submit</button>
+  </form>
+  
+
+</div>
+
+</body>
+</html>
