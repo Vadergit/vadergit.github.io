@@ -214,27 +214,26 @@ fieldset {
   <br/>
   <br/>
   <br/>
-	<title>"Save Web Form Data to Spreadsheets"</title>
-	<script
+	<title>"Tricking Factory to Spreadsheets"</title>
+<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
 	<script>
 		function SubForm (){
 			$.ajax({
-				url:"https://api.apispreadsheets.com/data/AWcvdtIorLm4LBC8/",
+				url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
 				type:"post",
 				data:$("#myForm").serializeArray(),
 				success: function(){
-				 window.alert("Anmeldedaten erfolgreich Submitted :) ")
-				}
+					alert("Form Data Submitted :)")
+				},
 				error: function(){
-					alert("Please try Again :(")
+					alert("There was an error :(")
 				}
 			});
 		}
-
-  </script>
+	</script>
 
 
 
@@ -257,8 +256,7 @@ fieldset {
 
 <form id="myForm">
 
-  	<input type="hidden" name="Datum" value=""  />
-		<br/>
+  
 		<input name="Vorname" placeholder="Vorname"  />
 		<br/>
 		<input name="Nachname" placeholder="Nachname"  />
