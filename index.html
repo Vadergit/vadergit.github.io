@@ -214,26 +214,26 @@ fieldset {
   <br/>
   <br/>
   <br/>
-	<title>"Tricking Factory to Spreadsheets"</title>
-<script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
-	</script>
+	<title>"Save Web Form Data to Spreadsheets"</title>
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<script>
+	function SubForm (){
+		$.ajax({
+			url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
+			type:"post",
+			data:$("#myForm").serializeArray(),
+			success: function(){
+				alert("Anmeldeinformationen wurden erfoglreich übermittelt :)")
+			},
+			error: function(){
+				alert("Anmeldeinformationen wurden erfoglreich übermittelt :)")
+			}
+		});
+	}
+</script>
 
 
 
@@ -250,13 +250,14 @@ fieldset {
 
 
 <div class="content">
+	<h1>Github </h1>
   <h1>Tricking Factory </h1>
  <h1>Anmeldeformular: </h1>
   <br/>
 
 <form id="myForm">
 
-  
+  	
 		<input name="Vorname" placeholder="Vorname"  />
 		<br/>
 		<input name="Nachname" placeholder="Nachname"  />
