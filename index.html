@@ -228,7 +228,7 @@ fieldset {
 		$.ajax({
 			url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
 			type:"post",
-			data:$("#myForm").serializeArray(),
+			data:$("#myForm",id="demo").serializeArray(),
 			success: function(){
 				alert("Anmeldeinformationen wurden erfoglreich übermittelt :)")
 			},
@@ -251,8 +251,6 @@ fieldset {
 <body>
 
 
-
-
 <div class="content">
 	<p id="demo"></p>
 	<h1>Github3 </h1>
@@ -261,9 +259,8 @@ fieldset {
   <br/>
 
 <form id="myForm">
-
-  	
-		<input name="Vorname" placeholder="Vorname" value="demo" />
+	
+		<input name="Vorname" placeholder="Vorname" />
 		<br/>
 		<input name="Nachname" placeholder="Nachname"  />
 		<br/>
