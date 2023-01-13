@@ -228,7 +228,7 @@ fieldset {
 		$.ajax({
 			url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
 			type:"post",
-			data:$("#myForm",(id="demo")).serializeArray(),
+			data:$("#myForm").serializeArray(),
 			success: function(){
 				alert("Anmeldeinformationen wurden erfoglreich übermittelt :)")
 			},
