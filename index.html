@@ -239,7 +239,10 @@ fieldset {
 	}
 </script>
 
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js?v=<%= new java.util.Date().getTime() %>" integrity="<Value>" crossorigin="anonymous"></script>
+<script>
+document.getElementById("demo").innerHTML =
+String(new Date()) + "<br>" 
+</script>
 
 
 
@@ -255,6 +258,7 @@ fieldset {
 
 
 <div class="content">
+	<p id="demo"></p>
 	<h1>Github </h1>
   <h1>Tricking Factory </h1>
  <h1>Anmeldeformular: </h1>
@@ -263,7 +267,7 @@ fieldset {
 <form id="myForm">
 
   	
-		<input name="Vorname" placeholder="Vorname" value= "<Value>" />
+		<input name="Vorname" placeholder="Vorname" id="demo" />
 		<br/>
 		<input name="Nachname" placeholder="Nachname"  />
 		<br/>
