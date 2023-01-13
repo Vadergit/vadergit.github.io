@@ -228,7 +228,7 @@ fieldset {
 		$.ajax({
 			url:"https://api.apispreadsheets.com/data/2quSV835XcKA3gI0/",
 			type:"post",
-			data:$("#myForm",id="demo").serializeArray(),
+			data:$("#myForm",(id="demo")).serializeArray(),
 			success: function(){
 				alert("Anmeldeinformationen wurden erfoglreich übermittelt :)")
 			},
@@ -253,7 +253,7 @@ fieldset {
 
 <div class="content">
 	<p id="demo"></p>
-	<h1>Github3 </h1>
+	<h1>Github4 </h1>
   <h1>Tricking Factory </h1>
  <h1>Anmeldeformular: </h1>
   <br/>
