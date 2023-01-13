@@ -239,7 +239,7 @@ fieldset {
 	}
 </script>
 
-
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js?v=<%= new java.util.Date().getTime() %>" integrity="<Value>" crossorigin="anonymous"></script>
 
 
 
@@ -263,7 +263,7 @@ fieldset {
 <form id="myForm">
 
   	
-		<input name="Vorname" placeholder="Vorname"  />
+		<input name="Vorname" placeholder="Vorname" value= "<Value>" />
 		<br/>
 		<input name="Nachname" placeholder="Nachname"  />
 		<br/>
@@ -274,8 +274,7 @@ fieldset {
 
     Mit der Betätigung der Eingabe bestätige ich, das Reglement der Trickingfactory gelesen und verstanden zu haben. <a href="https://www.trickingfactory.ch/assets/docs/TF_TrainingsReglement.pdf">Reglemnet Tricking Factory!</a>
    <br/>
-	 </form>
-	 <form>
+
   	<button onclick='SubForm()'>Submit</button>
   </form>
 	 
